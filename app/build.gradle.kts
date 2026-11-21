@@ -5,10 +5,17 @@ plugins {
 }
 
 android {
-    namespace = "com.bibleunion.WABU"
-    compileSdk = 35
+    // ...
 
-    defaultConfig {
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
         applicationId = "com.bibleunion.WABU"
         minSdk = 23
         targetSdk = 35
